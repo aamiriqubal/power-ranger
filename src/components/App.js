@@ -37,6 +37,7 @@ const App = () => {
         text: `${error.message} for input:${input}`,
         type: 'error',
       })
+      console.log(`${error.message} for input:${input}`);
     }
     return undefined;
   }
@@ -54,7 +55,7 @@ const App = () => {
       const suitableLinkStationWithMaxPower = PrService.findAndGetLinkStationAndPower(obj);
       result.push(getOutputString({ ...obj }, suitableLinkStationWithMaxPower));
     });
-    const outPut = result.map(rs => <div>{rs}.</div>);
+    const outPut = result.map((rs, i) => <div className={`result--${i}`}>{`${rs}.`}</div>);
     setResult(outPut);
     showNotification({
       text: 'Power ranger did it!',
