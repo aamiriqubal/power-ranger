@@ -1,5 +1,7 @@
 # POWER RANGER
 
+![](https://media.giphy.com/media/SsUc3ec7K5g5I5ZSyB/giphy.gif)
+
 This project solves a below specified problem.
 
 Program that solves the most suitable (with most power) link station for a device at given
