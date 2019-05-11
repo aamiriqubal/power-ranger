@@ -1,0 +1,53 @@
+@import "./_variable.scss";
+
+.ps-notification {
+  min-height: 48px;
+  max-width: 2040px;
+  background: #fff;
+  color: $pr-black;
+  font-weight: bold;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: $pr-baseline;
+  width: 100%;
+  z-index: 1;
+  animation: fadeout-notification 0.5s 1;
+  -webkit-animation: fadeout-notification 0.5s 1;
+  animation-fill-mode: forwards;
+
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+
+  @keyframes fadeout-notification {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes fadeout-notification {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  &--content {
+    padding: $pr-baseline;
+  }
+
+  &--success {
+    background: $pr-green;
+    color: $pr-white;
+  }
+
+  &--error {
+    background: $pr-red;
+    color: $pr-white;
+  }
+}
