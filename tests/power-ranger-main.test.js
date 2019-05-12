@@ -8,18 +8,18 @@ test('Power Ranger main page load test', async t => {
     await t.expect(Selector('.image-container').find('h1').innerText).eql('Power Ranger');
 });
 
-test('Test input field error: with empty value', async t => {
+test('Test input field: with empty value : returns error', async t => {
     await t.click(Selector('.button-submit').withText('EVALUATE'));
     await t.expect(Selector('.ps-notification--content').innerText).eql('Input field cannot be empty.')
 });
 
-test('Test input field error: with invalid values', async t => {
+test('Test input field: with invalid values : returns error with invalid message', async t => {
     await t.typeText(Selector('.input_field').withAttribute('name', 'input'),'(0, invalid-coordinate)');
     await t.click(Selector('.button-submit').withText('EVALUATE'));
     await t.expect(Selector('.ps-notification--content').innerText).eql('Input field should only contains number. value: "invalid-coordinate" not acceptable for input:(0, invalid-coordinate)')
 });
 
-test('Test input field error: with proper values', async t => {
+test('Test input field: with proper values : returns calculated value in output field', async t => {
     await t.typeText(Selector('.input_field').withAttribute('name', 'input'),'(0, 0) \n (100, 1)');
     await t.click(Selector('.button-submit').withText('EVALUATE'));
     await t.expect(Selector('.ps-notification--content').innerText).eql('Power ranger did it!')
