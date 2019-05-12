@@ -43,7 +43,7 @@ Or
 each line should contains the (x,y) co-ordinates.
 
 ## Development
-You need npm / yarn to run this application.
+You need `npm` / `yarn` to run this application. I have `yarn` here.
 
 ### Setup
 ```
