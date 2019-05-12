@@ -9,7 +9,7 @@ export const getArrayFromString = (value) => {
         .map(obj => {
           const number = parseInt(obj);
           if (!/^[0-9]*$/.test(number)) {
-            throw new Error(`Input field should only contain numbers. value: "${obj}" not acceptable`)
+            throw new Error(`Input field should only contain numbers. value: "${obj}" not acceptable.`)
           }
           return number;
         }));
