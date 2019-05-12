@@ -45,7 +45,7 @@ each line should contains the (x,y) co-ordinates.
 ## Development
 You need npm / yarn to run this application.
 
-#Setup
+# Setup
 ```
 git clone git@github.com:AamirSoftwareDeveloper/power-ranger.git
 cd power-ranger
