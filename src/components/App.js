@@ -34,10 +34,9 @@ const App = () => {
       return inputObj;
     } catch (error) {
       showNotification({
-        text: `${error.message} for input:${input}`,
+        text: `${error.message} Input:${input}`,
         type: 'error',
       })
-      console.log(`${error.message} for input:${input}`);
     }
     return undefined;
   }

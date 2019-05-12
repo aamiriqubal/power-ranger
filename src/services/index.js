@@ -15,7 +15,7 @@ export const getArrayFromString = (value) => {
         }));
     });
     if (inputObj.find(obj => obj.length !== 2)) {
-      throw new Error('Improper x, y as input. Object length should be 2');
+      throw new Error('Improper x, y as input. Object length should be 2.');
     }
     let parsedObject = [];
     inputObj.forEach(obj => {

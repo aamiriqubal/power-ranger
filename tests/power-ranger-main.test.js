@@ -16,13 +16,13 @@ test('Test input field with empty value, returns empty field error message.', as
 test('Test input field with invalid values, returns invalid input value error message.', async t => {
   await t.typeText(Selector('.input_field').withAttribute('name', 'input'),'(0, invalid-coordinate)');
   await t.click(Selector('.button-submit').withText('EVALUATE'));
-  await t.expect(Selector('.ps-notification--content').innerText).eql('Input field should only contain numbers. value: "invalid-coordinate" not acceptable. for input:(0, invalid-coordinate)')
+  await t.expect(Selector('.ps-notification--content').innerText).eql('Input field should only contain numbers. value: "invalid-coordinate" not acceptable. Input:(0, invalid-coordinate)')
 });
 
 test('Test input field with incorrect length of values, returns invalid input value error message.', async t => {
   await t.typeText(Selector('.input_field').withAttribute('name', 'input'),'(0, 100, 12)');
   await t.click(Selector('.button-submit').withText('EVALUATE'));
-  await t.expect(Selector('.ps-notification--content').innerText).eql('Improper x, y as input. Object length should be 2 for input:(0, 100, 12)')
+  await t.expect(Selector('.ps-notification--content').innerText).eql('Improper x, y as input. Object length should be 2. Input:(0, 100, 12)')
 });
 
 test('Test input field with proper values, returns calculated value in output field', async t => {
