@@ -54,7 +54,7 @@ const App = () => {
       const suitableLinkStationWithMaxPower = PrService.findAndGetLinkStationAndPower(obj);
       result.push(getOutputString({ ...obj }, suitableLinkStationWithMaxPower));
     });
-    const outPut = result.map((rs, i) => <div className={`result--${i}`}>{`${rs}.`}</div>);
+    const outPut = result.map((rs, i) => <div className={`result--${i}`} key={i}>{`${rs}.`}</div>);
     setResult(outPut);
     showNotification({
       text: 'Power ranger did it!',
