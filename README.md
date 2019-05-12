@@ -54,7 +54,7 @@ yarn start
 ``` 
 ## Visual regression test
 The visual regression test works using [testcafe](https://devexpress.github.io/testcafe/).
-In one console run `yarn start` wait for the application to be up and then run.
+In one console/terminal run `yarn start` wait for the application to be up and then open another console/terminal run.
 ```
 yarn test
 ```
