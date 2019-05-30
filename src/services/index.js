@@ -44,7 +44,7 @@ export const findAndGetLinkStationAndPower = (input) => {
     if (reach < distance) {
       powerObj.push(0);
     } else {
-      powerObj.push(reach - distance);
+      powerObj.push(Math.pow((reach - distance),2));
     }
   })
   let maxPower = 0;
