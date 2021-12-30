@@ -33,7 +33,13 @@ const getDistance = (x2, y2, x1, y1) => {
 }
 
 export const findAndGetLinkStationAndPower = (input) => {
-  const LinkStations = [[0, 0, 10], [20, 20, 5], [10, 0, 12]];
+  const LinkStations = [
+    [0, 0, 9],
+    [20, 20, 6],
+    [10, 0, 12],
+    [5, 5, 13],
+    [99, 25, 2]
+  ];;
   const x = input.x;
   const y = input.y;
   const powerObj = [];
