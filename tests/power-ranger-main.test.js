@@ -29,6 +29,6 @@ test('Test input field with proper values, returns calculated value in output fi
   await t.typeText(Selector('.input_field').withAttribute('name', 'input'),'(0, 0) \n (100, 1)');
   await t.click(Selector('.button-submit').withText('EVALUATE'));
   await t.expect(Selector('.ps-notification--content').innerText).eql('Power ranger did it!')
-  await t.expect(Selector('.output_field').find('.result--0').innerText).eql('Best link station for point 0, 0 is 0, 0 with power 100.')
+  await t.expect(Selector('.output_field').find('.result--0').innerText).eql('Best link station for point 0, 0 is 0, 0 with power 81.')
   await t.expect(Selector('.output_field').find('.result--1').innerText).eql('No link station within reach for point 100, 1.')
 });
